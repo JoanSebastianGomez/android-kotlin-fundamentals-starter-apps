@@ -15,9 +15,7 @@ class GameViewModel : ViewModel() {
     private lateinit var wordList: MutableList<String>
 
 
-    /**
-     * Resets the list of words and randomizes the order
-     */
+
     private fun resetList() {
         wordList = mutableListOf(
                 "queen",
@@ -51,9 +49,7 @@ class GameViewModel : ViewModel() {
         nextWord()
     }
 
-    /**
-     * Callback called when the ViewModel is destroyed
-     */
+
     override fun onCleared() {
         super.onCleared()
         Log.i("GameViewModel", "GameViewModel destroyed!")
@@ -69,9 +65,6 @@ class GameViewModel : ViewModel() {
         nextWord()
     }
 
-    /**
-     * Moves to the next word in the list.
-     */
     private fun nextWord() {
         //Select and remove a word from the list
         if (!wordList.isEmpty()) {
